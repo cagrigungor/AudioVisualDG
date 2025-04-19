@@ -172,7 +172,7 @@
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:20px"><a href='https://cagrigungor.github.io/WSOD-AMPLIFIER/resources/WACV24_Cagri_Round2_camera_ready.pdf'>[Paper]</a></span>
+							<span style="font-size:20px"><a href='https://ieeexplore.ieee.org/abstract/document/10888568'>[Paper]</a></span>
 						</center>
 					</td>
 					<td align=center width=120px>
@@ -193,7 +193,7 @@
 			<tr>
 				<td width=360px>
 					<center>
-						<img class="round" style="width:800px" src="./resources/concept_wsod_amplifier.png"/>
+						<img class="round" style="width:800px" src="./resources/concept_audiodg.png"/>
 					</center>
 				</td>
 			</tr>
@@ -201,7 +201,7 @@
 		<table align=center width=850px>
 			<tr>
 				<td style="text-align:justify">
-					Object from the same category may be at different depth depending on the context/setting. We use captions to capture context-conditioned depth ranges for each object class and co-occurring word: a bird may be closer when co-occurring with the word “feed” than the word “ocean”. We use these ranges to spot relevant proposals that may contain target objects, and prune irrelevant ones, in weakly supervised object detection training.
+					The proposed framework extracts appearance, motion, and audio embeddings using trained encoders. Visual-text and audio-text alignments are performed independently to enhance the robustness of action representations. Consistency rating , calculated offline using a LLM, is then multiplied by audio embedding, optimizing the influence of audio in multimodal prediction. Note that narrations and consistency rate are only utilized during training to improve representation learning. During inference, embeddings are directly fused before prediction.
 				</td>
 			</tr>
 		</table>
@@ -213,8 +213,7 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td style="text-align:justify">
-			Despite recent attention to depth for various tasks, it is still an unexplored modality for weakly-supervised object detection (WSOD). We propose an amplifier method for enhancing the performance of WSOD by integrating depth information. Our approach can be applied to different WSOD methods based on multiple-instance learning, without necessitating additional annotations or inducing large computational cost. Our proposed method employs monocular depth estimation to obtain hallucinated depth information, which is then incorporated into a Siamese WSOD network using contrastive loss and fusion. By analyzing the relationship between language context and depth, we calculate depth priors to identify the bounding box proposals that may contain an object of interest. These depth priors are then utilized to update the list of pseudo ground-truth boxes, or adjust the confidence of per-box predictions. We evaluate our proposed method on three datasets (COCO, PASCAL VOC, and Conceptual Captions) by implementing it on top of two state-of-the-art WSOD methods, and we demonstrate a substantial enhancement in performance.			</td>
-		</tr>
+			First-person activity recognition is rapidly growing due to the widespread use of wearable cameras but faces challenges from domain shifts across different environments, such as varying objects or background scenes. We propose a multimodal framework that improves domain generalization by integrating motion, audio, and appearance features. Key contributions include analyzing the resilience of audio and motion features to domain shifts, using audio narrations for enhanced audio-text alignment, and applying consistency ratings between audio and visual narrations to optimize the impact of audio in recognition during training. Our approach achieves state-of-the-art performance on the ARGO1M dataset, effectively generalizing across unseen scenarios and locations.		</tr>
 	</table>
 	<br>
 	<hr>
